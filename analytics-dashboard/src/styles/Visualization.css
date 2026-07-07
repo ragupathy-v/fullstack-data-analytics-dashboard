@@ -1,0 +1,27 @@
+/* =========================================================
+   VISUALIZATION PAGE — Visualization.jsx
+   ========================================================= */
+
+.visualization-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.visualization-header {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.chart-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.chart-grid > * {
+  width: 100%;
+}
