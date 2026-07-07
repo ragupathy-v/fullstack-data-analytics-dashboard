@@ -37,8 +37,6 @@ class DataInfo(APIView):
                 for chunk in data.chunks():
                     destination.write(chunk)
 
-            request.session['file']=file_path
-
             df=pd.read_csv(file_path)
             analysedata=Datasetinfo(df)        
             return Response(data={'analysedata': analysedata, 'file_path': file_path},status=status.HTTP_200_OK)
