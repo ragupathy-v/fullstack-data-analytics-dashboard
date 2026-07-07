@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 ]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "https://fullstack-data-analytics-dashboard.vercel.app/",
 ]
 ALLOWED_HOSTS = ["*"]
 
@@ -52,6 +53,7 @@ CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
+    "https://fullstack-data-analytics-dashboard.vercel.app/",
 ]
 
 MIDDLEWARE = [
