@@ -190,7 +190,7 @@ Backend API: _Coming Soon_
 
 **Ragupathy V**
 
-GitHub: https://github.com/ragupayhy-v
+GitHub: https://github.com/ragupathy-v
 
 LinkedIn: https://www.linkedin.com/in/ragupathyv/
 

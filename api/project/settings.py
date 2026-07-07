@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
 ]
+ALLOWED_HOSTS = ["*"]
 
 CORS_ALLOW_CREDENTIALS = True
 
@@ -62,6 +63,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    
+
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -136,3 +141,7 @@ STATIC_URL = 'static/'
 
 MEDIA_URL='/media/'
 MEDIA_ROOT=BASE_DIR/'media'
+
+STATIC_URL = "static/"
+
+STATIC_ROOT = BASE_DIR / "staticfiles"

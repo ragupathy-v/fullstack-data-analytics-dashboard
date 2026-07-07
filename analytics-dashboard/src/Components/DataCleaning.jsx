@@ -5,7 +5,7 @@ import { DataContext } from '../App'
 import '../styles/Datacleaning.css'
 
 function DataCleaning(props) {
-    const{file,filepath,data,setData}=useContext(DataContext)
+    const{file,filepath,data,setData,API}=useContext(DataContext)
     const [colname,setColname]=useState('')
     
     const datacleaning=async(e)=>{
@@ -17,7 +17,7 @@ function DataCleaning(props) {
          }
 
         try{
-          const res=await axios.post('http://127.0.0.1:8000/analytics/datacleaning/',{method,file_path:filepath,colname}, {
+          const res=await axios.post(`${API}/analytics/datacleaning/`,{method,file_path:filepath,colname}, {
         withCredentials: true
         
     })

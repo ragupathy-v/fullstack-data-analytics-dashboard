@@ -4,7 +4,7 @@ import axios from "axios";
 import '../styles/Barchart.css'
 
 function Barchart() {
-  const { data, filepath } = useContext(DataContext);
+  const { data, filepath,API } = useContext(DataContext);
   const [colname, setColname] = useState("");
   const [colname2, setColname2] = useState("");
   const [image, setImage] = useState("");
@@ -22,7 +22,7 @@ function Barchart() {
 
     try {
       const res = await axios.post(
-        "http://127.0.0.1:8000/analytics/viasualization/",
+        `${API}/analytics/viasualization/`,
         { charttype, file_path: filepath, colname, colname2 },
         {
           withCredentials: true,

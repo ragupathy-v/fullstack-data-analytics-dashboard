@@ -3,11 +3,11 @@ import axios from "axios";
 import { DataContext } from "../App";
 import '../styles/Download.css'
 function Download() {
-    const { data, filepath } = useContext(DataContext);
+    const { data, filepath,API } = useContext(DataContext);
 
     const download=async()=>{
     try{
-    const res= await axios.post('http://127.0.0.1:8000/analytics/downloaddataset/',
+    const res= await axios.post(`${API}/analytics/downloaddataset/`,
       {'file_path':filepath},{responseType:'blob'});
       
       const fileurl= URL.createObjectURL(res.data)

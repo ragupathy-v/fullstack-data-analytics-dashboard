@@ -3,6 +3,9 @@ import axios from "axios";
 import Header from "./Components/Header";
 import { Outlet } from "react-router-dom";
 import './App.css'
+{/* axiosurl */}
+const API = import.meta.env.VITE_API_URL;
+
 export const DataContext=createContext()
 
 function App() {
@@ -19,7 +22,7 @@ function App() {
 
     try {
       const res = await axios.post(
-        "http://127.0.0.1:8000/analytics/data-info/",
+        `${API}/analytics/data-info/`,
         formData,
         { withCredentials: true },
       );
@@ -48,7 +51,7 @@ function App() {
 
       
       {/*context api to share the states and setstatef function */}
-      <DataContext.Provider value={{data,filepath,file,setData}}>
+      <DataContext.Provider value={{data,filepath,file,setData,API}}>
       <Header/>
       <main className="app-main">
       <Outlet/>
